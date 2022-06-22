@@ -136,3 +136,6 @@ def hillClimbing(fitness,text,dictionaire,NBITERGLOB,NBITERSTATIC,cle):
 ########################################################################################################
 def ok():
     return 10 
+
+
+vfdjfidsjkgrzif
