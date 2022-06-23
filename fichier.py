@@ -52,4 +52,11 @@ def NETTOYER_lire_fichier(nomfichier):
                     res += c.upper()
      
     return res
- 
+
+def nettoyer_texte(text): 
+    res = ""
+    for i in text: 
+        if ord(i.upper()) in range(65,98):
+            res += i.upper()
+    return res
+        

@@ -2,15 +2,19 @@ import fichier
 import math 
 import random 
 
+coef = 0
+
 ########################################################################################################
+
 def encipher(text ,cle):
     res=""
     c=''
     for c in text:
         res+=cle[ord(c)-65]
-
     return res 
+
 ########################################################################################################
+
 def decipher(ctext ,cle):
     res=""
     c=''
@@ -18,7 +22,9 @@ def decipher(ctext ,cle):
         res+=chr(cle.index(c)+65)
         
     return res  
+
 ########################################################################################################
+
 def genKey(cle,c):
     if(cle==""):                                    # Cas de base: generation d'une cle
         liste=list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
@@ -29,7 +35,7 @@ def genKey(cle,c):
     else:                                           # Modification de la cle existante
         res=cle
         l=list(cle)
-        for i in range(0,c): #OU 3 ou 1?
+        for i in range(0,c): 
             r1=1
             r2=1
             while(r1==r2):         
@@ -42,56 +48,74 @@ def genKey(cle,c):
         res = "".join(l)    
         
     return res
+
 ########################################################################################################
-def fitness1(text,dictionaire):
+
+def fitness1(text,dictionaire): 
     n=dictionaire["n"]
     res=0
     liste=list(text)
     for x in range(len(text)-n):
         res+=math.log2(dictionaire.get("".join(liste[x:x+n]),10))
     return res
+
 ########################################################################################################
-def dict_mono_grams(text): # On construit un dictionnaire avec l'occurence de chaque lettre dans le texte 
+
+def dict_mono_grams_texte(text): # On construit un dictionnaire avec l'occurence de chaque lettre dans le texte 
+    text2 = fichier.nettoyer_texte(text)
     dico = dict()
-    nblettre = 0
-    res = text
+    res = text2
     for i in res : 
         if i not in dico : 
-            nblettre+=1
             dico[i]=1
         else :
             dico[i]= dico[i]+1
-    for a in dico : 
-        dico[a]= dico[a]/nblettre
     return dico
+
+def dict_mono_grams_fichier(nomfichier): 
+    text = fichier.NETTOYER_lire_fichier(nomfichier)
+    return dict_mono_grams_texte(text)
 ########################################################################################################
 
-
-def fitness2(dico_text,dico_langue): 
+def fitness2(text,dico_langue):  
+    calcul_coef(dico_langue) 
+    dico_text = dict_mono_grams_texte(text)
     s1 = 0
     s2 =0
-    s3= 0
     moyenne1= 0
     moyenne2= 0
     nb1=0
     nb2=0
     finale = 0
+
     for lettre in dico_text: 
+        
         moyenne1 = moyenne1 + dico_text[lettre]
         nb1=nb1+1
+    
     for lettre in dico_langue: 
-        moyenne2 = moyenne2 + dico_langue[lettre]
-        nb2=nb2+1
+        if lettre != "crypto" and lettre != "n":
+            moyenne2 = moyenne2 + dico_langue[lettre]
+            nb2=nb2+1
+
+    
     moyenne1=moyenne1/nb1
     moyenne2=moyenne2/nb2
     
-    for i in dico_text: 
-        s1 = s1 + (dico_text[i]-moyenne1)*(dico_langue[i]-moyenne2)
-        s2 = s2+ (dico_text[i]-moyenne1)**2
-        s3= s3+(dico_langue[i]-moyenne2)**2
-    finale = s1/(math.sqrt(s2)*math.sqrt(s3))
+    for i in dico_langue: 
+        if i not in dico_text: 
+            if i!='n' and i!='crypto':
+                s1 = s1 - moyenne1*(dico_langue[i]-moyenne2)
+                s2 = s2+ (moyenne1)**2
+        else:
+            s1 = s1 + (dico_text[i]-moyenne1)*(dico_langue[i]-moyenne2)
+            s2 = s2+ (dico_text[i]-moyenne1)**2
+    
+    finale = s1/(math.sqrt(s2)*coef)
     return finale
+
 ########################################################################################################
+
 def compare_cle(c1,c2):
     cmp=0
     cl1=list(c1)
@@ -100,12 +124,16 @@ def compare_cle(c1,c2):
         if(cl1[i]==cl2[i]):
             cmp+=1
     return cmp
+
 ########################################################################################################
+
 def ngram(n,path):
     d = dict()
     d=fichier.lire_ngrame(path+str(n )+"grams.txt")
     return d
-########################################################################################################    
+
+########################################################################################################  
+  
 def hillClimbing(fitness,text,dictionaire,NBITERGLOB,NBITERSTATIC,cle):
     
     scorePar=0
@@ -133,9 +161,26 @@ def hillClimbing(fitness,text,dictionaire,NBITERGLOB,NBITERSTATIC,cle):
     fichier.ecriture_fichier("./text/textDECHIFRE.txt",decipher(text,clePar)+"\n Avec la cle :\n"+clePar)
     
     return clePar
+
 ########################################################################################################
-def ok():
-    return 10 
+
+def calcul_coef(dico_langue): 
+    global coef
+    moyenne = 0
+    s = 0
+    n=0
+    #calcul de la moyenne
+    for lettre in dico_langue: 
+        moyenne = moyenne + dico_langue[lettre]
+        n= n+1
+    moyenne = moyenne/n
+    
+    for i in dico_langue : 
+        if i!="n" and i!="crypto":
+            s = s+ (dico_langue[i]-moyenne)**2
+        
+    s = math.sqrt(s)
+    coef = s
+    
 
 
-vfdjfidsjkgrzif
