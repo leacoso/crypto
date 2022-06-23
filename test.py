@@ -33,7 +33,8 @@ cryptanalyse(text,2,"")
 
 
 
-
+def ok():
+    print("Jussieu")
 
 
 
