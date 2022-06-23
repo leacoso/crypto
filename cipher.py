@@ -1,6 +1,9 @@
 import fichier 
 import math 
 import random 
+import numpy as np
+import matplotlib.pyplot as plt
+
 
 coef = 0
 
@@ -134,19 +137,19 @@ def ngram(n,path):
 
 ########################################################################################################  
   
-def hillClimbing(fitness,text,dictionaire,NBITERGLOB,NBITERSTATIC,cle):
+def hillClimbing(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle):
     
     scorePar=0
     cmpS=0                                          # Compteur stationaire
     clePar=genKey(cle,1)
     deciphered=decipher(text,clePar)
-    score_init=fitness(text,dictionaire)                # Score du texte chiffré initial
-    scorePar=fitness(deciphered,dictionaire)
+    score_init=fitness(text,dictionnaire)                # Score du texte chiffré initial
+    scorePar=fitness(deciphered,dictionnaire)
     i=0
     while i<NBITERGLOB and cmpS<NBITERSTATIC:
         cleEnf=genKey(clePar,1)
         deciphered=decipher(text,cleEnf)
-        scoreEnf=fitness(deciphered,dictionaire)
+        scoreEnf=fitness(deciphered,dictionnaire)
         if(scorePar < scoreEnf):                    # La cle enfant a un meilleur score fitness que la cle parent
             scorePar=scoreEnf
             clePar=cleEnf
@@ -182,5 +185,41 @@ def calcul_coef(dico_langue):
     s = math.sqrt(s)
     coef = s
     
+def courbe(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle):
+    n = dictionnaire["n"]
+    plt.title("score en fonction des itérations des "+str(n)+"-gram")
 
+    liste1 = []
+    liste2 = []
+    
+    scorePar=0
+    cmpS=0                                          # Compteur stationaire
+    clePar=genKey(cle,1)
+    deciphered=decipher(text,clePar)
+    score_init=fitness(text,dictionnaire)                # Score du texte chiffré initial
+    scorePar=fitness(deciphered,dictionnaire)
+    i=0
+    while i<NBITERGLOB and cmpS<NBITERSTATIC:
+        cleEnf=genKey(clePar,1)
+        deciphered=decipher(text,cleEnf)
+        scoreEnf=fitness(deciphered,dictionnaire)
+        liste1.append(i)
+        liste2.append(scoreEnf)
+        if(scorePar < scoreEnf):                    # La cle enfant a un meilleur score fitness que la cle parent
+            scorePar=scoreEnf
+            clePar=cleEnf
+            cmpS=0
+        else:                                       # Cas sans progression
+            cmpS+=1
+        i+=1
+        
+    plt.plot(liste1, liste2)
+    plt.xlabel('temps')
+    plt.ylabel('score')
+    plt.show()
+    #print("\nTEXTE CHIFFRE : \n"+text+"\n\n  Score initial : "+str(score_init)+"\n")
+    #print("\nTEXTE DECHIFFRE : \n"+decipher(text,clePar)+"\n\n  Score final :  "+str(scorePar)+"\n  Cle appliquee : "+clePar)
+    fichier.ecriture_fichier("./text/textDECHIFRE.txt",decipher(text,clePar)+"\n Avec la cle :\n"+clePar)
+    
+    return clePar
 
