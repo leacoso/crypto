@@ -224,3 +224,6 @@ def courbe(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle):
     
     return clePar
 
+
+###################################################################################################
+
