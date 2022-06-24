@@ -150,7 +150,8 @@ def hillClimbing(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle):
         cleEnf=genKey(clePar,1)
         deciphered=decipher(text,cleEnf)
         scoreEnf=fitness(deciphered,dictionnaire)
-        if(scorePar < scoreEnf):                    # La cle enfant a un meilleur score fitness que la cle parent
+        if(scorePar < (scoreEnf)):
+            #print("on change de score,SCORE = "+str(scoreEnf)+" la nouvelle clé est "+cleEnf )# La cle enfant a un meilleur score fitness que la cle parent
             scorePar=scoreEnf
             clePar=cleEnf
             cmpS=0
