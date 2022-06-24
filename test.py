@@ -26,4 +26,19 @@ text=cipher.encipher(text,cle_de_cryptage)
 tps1 = time.time()
 key3 = cryptanalyse(text,1,"",cipher.fitness2)
 tps2 =  time.time()
-print(tps2 - tps1)
+
+def test1(text):
+    cle="ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
+    dico = cipher.ngram(4,path_stats)
+    text=fichier.NETTOYER_lire_fichier("./text/textCLAIRE.txt")
+    text=cipher.encipher(text,cle_de_cryptage)
+    #key = cryptanalyse(text,4,"",cipher.fitness1)
+    tps1 = time.time()
+    key3 = cryptanalyse(text,1,"",cipher.fitness2)
+    tps2 =  time.time()
+
+    
+
+
+
+
