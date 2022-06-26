@@ -7,6 +7,7 @@ import matplotlib.pyplot as plt
 
 coef = 0
 
+
 ########################################################################################################
 
 def encipher(text ,cle):
@@ -140,8 +141,12 @@ def ngram(n,path):
 def hillClimbing(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle):
     
     scorePar=0
-    cmpS=0                                          # Compteur stationaire
-    clePar=genKey(cle,1)
+    cmpS=0   
+    if cle == "":                                        # Compteur stationaire                                           
+        clePar=genKey(cle,1)
+    else : 
+        clePar = cle
+    print("CLE DEBUT = "+cle)
     deciphered=decipher(text,clePar)
     score_init=fitness(text,dictionnaire)                # Score du texte chiffré initial
     scorePar=fitness(deciphered,dictionnaire)
@@ -161,9 +166,9 @@ def hillClimbing(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle):
         
 
     #print("\nTEXTE CHIFFRE : \n"+text+"\n\n  Score initial : "+str(score_init)+"\n")
-    #print("\nTEXTE DECHIFFRE : \n"+decipher(text,clePar)+"\n\n  Score final :  "+str(scorePar)+"\n  Cle appliquee : "+clePar)
+    print("\nTEXTE DECHIFFRE : \n"+decipher(text,clePar)+"\n\n  Score final :  "+str(scorePar)+"\n  Cle appliquee : "+clePar)
     fichier.ecriture_fichier("./text/textDECHIFRE.txt",decipher(text,clePar)+"\n Avec la cle :\n"+clePar)
-    
+   
     return clePar
 
 ########################################################################################################
