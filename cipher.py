@@ -27,12 +27,9 @@ def decipher(ctext ,cle):
 
 def genKey(cle,c):
     if(cle==""):                                    # Cas de base: generation d'une cle
-        liste=list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-        random.shuffle(liste)
-        res="".join(liste)
+        res="".join(random.shuffle(list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")))
         
     else:                                           # Modification de la cle existante
-        res=cle
         l=list(cle)
         for i in range(0,c): 
             r1=1
