@@ -1,0 +1,279 @@
+\begin{table}[]
+\centering 
+\caption{TRIGRAMMES}
+\vspace{10mm}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME \\ \hline
+\textit{1000} & \textit{500} & \textit{15.9/26} & \textit{33047.886} & \textit{1.077} \\ \hline
+\textit{1000} & \textit{750} & \textit{14.9/26} & \textit{32772.854} & \textit{1.079} \\ \hline
+\textit{1500} & \textit{500} & \textit{16.75/26} & \textit{32990.429} & \textit{1.603} \\ \hline
+\textit{1500} & \textit{750} & \textit{18.35/26} & \textit{33321.393} & \textit{1.614} \\ \hline
+\textit{1500} & \textit{1000} & \textit{16.65/26} & \textit{32907.294} & \textit{1.614} \\ \hline
+\textit{1500} & \textit{1250} & \textit{19.6/26} & \textit{33597.595} & \textit{1.613} \\ \hline
+\textit{2000} & \textit{500} & \textit{20.0/26} & \textit{33682.421} & \textit{1.914} \\ \hline
+\textit{2000} & \textit{750} & \textit{20.15/26} & \textit{33679.843} & \textit{2.040} \\ \hline
+\textit{2000} & \textit{1000} & \textit{19.9/26} & \textit{33713.285} & \textit{2.139} \\ \hline
+\textit{2000} & \textit{1250} & \textit{13.6/26} & \textit{32513.655} & \textit{2.150} \\ \hline
+\textit{2000} & \textit{1500} & \textit{19.85/26} & \textit{33728.576} & \textit{2.148} \\ \hline
+\textit{2000} & \textit{1750} & \textit{17.1/26} & \textit{33238.137} & \textit{2.149} \\ \hline
+\textit{2500} & \textit{500} & \textit{17.7/26} & \textit{33255.945} & \textit{2.133} \\ \hline
+\textit{2500} & \textit{750} & \textit{16.75/26} & \textit{32889.646} & \textit{2.355} \\ \hline
+\textit{2500} & \textit{1000} & \textit{20.8/26} & \textit{33797.772} & \textit{2.564} \\ \hline
+\textit{2500} & \textit{1250} & \textit{21.0/26} & \textit{33992.091} & \textit{2.590} \\ \hline
+\textit{2500} & \textit{1500} & \textit{18.85/26} & \textit{33566.640} & \textit{2.675} \\ \hline
+\textit{2500} & \textit{1750} & \textit{22.7/26} & \textit{34245.244} & \textit{2.681} \\ \hline
+\textit{2500} & \textit{2000} & \textit{22.2/26} & \textit{34218.207} & \textit{2.678} \\ \hline
+\textit{2500} & \textit{2250} & \textit{18.4/26} & \textit{33389.978} & \textit{2.688} \\ \hline
+\textit{3000} & \textit{500} & \textit{19.1/26} & \textit{33578.716} & \textit{1.936} \\ \hline
+\textit{3000} & \textit{750} & \textit{17.15/26} & \textit{33135.427} & \textit{2.641} \\ \hline
+\textit{3000} & \textit{1000} & \textit{18.95/26} & \textit{33521.906} & \textit{2.695} \\ \hline
+\textit{3000} & \textit{1250} & \textit{23.9/26} & \textit{34498.324} & \textit{3.004} \\ \hline
+\textit{3000} & \textit{1500} & \textit{18.45/26} & \textit{33358.032} & \textit{3.085} \\ \hline
+\textit{3000} & \textit{1750} & \textit{21.45/26} & \textit{34014.555} & \textit{3.167} \\ \hline
+\textit{3000} & \textit{2000} & \textit{20.35/26} & \textit{33816.975} & \textit{3.202} \\ \hline
+\textit{3000} & \textit{2250} & \textit{20.65/26} & \textit{33849.543} & \textit{3.213} \\ \hline
+\textit{3000} & \textit{2500} & \textit{19.35/26} & \textit{33546.775} & \textit{3.218} \\ \hline
+\textit{3000} & \textit{2750} & \textit{22.8/26} & \textit{34277.278} & \textit{3.214} \\ \hline
+\textit{3500} & \textit{500} & \textit{20.4/26} & \textit{33935.398} & \textit{1.957} \\ \hline
+\textit{3500} & \textit{750} & \textit{18.75/26} & \textit{33379.156} & \textit{2.401} \\ \hline
+\textit{3500} & \textit{1000} & \textit{23.55/26} & \textit{34420.275} & \textit{2.709} \\ \hline
+\textit{3500} & \textit{1250} & \textit{23.5/26} & \textit{34486.696} & \textit{3.094} \\ \hline
+\end{tabular}
+\end{table}\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME \\ \hline
+\textit{3500} & \textit{1500} & \textit{20.3/26} & \textit{33826.955} & \textit{3.234} \\ \hline
+\textit{3500} & \textit{1750} & \textit{20.2/26} & \textit{33812.653} & \textit{3.382} \\ \hline
+\textit{3500} & \textit{2000} & \textit{19.75/26} & \textit{33608.295} & \textit{3.687} \\ \hline
+\textit{3500} & \textit{2250} & \textit{22.75/26} & \textit{34274.977} & \textit{3.664} \\ \hline
+\textit{3500} & \textit{2500} & \textit{20.75/26} & \textit{33806.429} & \textit{3.744} \\ \hline
+\textit{3500} & \textit{2750} & \textit{18.25/26} & \textit{33411.617} & \textit{3.750} \\ \hline
+\textit{3500} & \textit{3000} & \textit{21.95/26} & \textit{34052.202} & \textit{3.745} \\ \hline
+\textit{3500} & \textit{3250} & \textit{22.8/26} & \textit{34258.847} & \textit{3.749} \\ \hline
+\textit{4000} & \textit{500} & \textit{20.85/26} & \textit{34003.797} & \textit{1.937} \\ \hline
+\textit{4000} & \textit{750} & \textit{19.3/26} & \textit{33563.520} & \textit{2.312} \\ \hline
+\textit{4000} & \textit{1000} & \textit{20.6/26} & \textit{33840.730} & \textit{2.944} \\ \hline
+\textit{4000} & \textit{1250} & \textit{16.25/26} & \textit{32955.129} & \textit{3.215} \\ \hline
+\textit{4000} & \textit{1500} & \textit{22.7/26} & \textit{34255.901} & \textit{3.344} \\ \hline
+\textit{4000} & \textit{1750} & \textit{20.1/26} & \textit{33832.100} & \textit{3.551} \\ \hline
+\textit{4000} & \textit{2000} & \textit{20.1/26} & \textit{33835.168} & \textit{3.803} \\ \hline
+\textit{4000} & \textit{2250} & \textit{18.4/26} & \textit{33394.780} & \textit{4.053} \\ \hline
+\textit{4000} & \textit{2500} & \textit{21.05/26} & \textit{33941.864} & \textit{4.239} \\ \hline
+\textit{4000} & \textit{2750} & \textit{20.5/26} & \textit{33832.224} & \textit{4.221} \\ \hline
+\textit{4000} & \textit{3000} & \textit{20.3/26} & \textit{33813.447} & \textit{4.287} \\ \hline
+\textit{4000} & \textit{3250} & \textit{21.4/26} & \textit{34061.683} & \textit{4.284} \\ \hline
+\textit{4000} & \textit{3500} & \textit{22.05/26} & \textit{34031.815} & \textit{4.279} \\ \hline
+\textit{4000} & \textit{3750} & \textit{19.45/26} & \textit{33609.954} & \textit{4.283} \\ \hline
+\textit{4500} & \textit{500} & \textit{18.8/26} & \textit{33541.722} & \textit{2.300} \\ \hline
+\textit{4500} & \textit{750} & \textit{20.3/26} & \textit{33814.721} & \textit{2.542} \\ \hline
+\textit{4500} & \textit{1000} & \textit{20.05/26} & \textit{33830.543} & \textit{2.818} \\ \hline
+\textit{4500} & \textit{1250} & \textit{20.35/26} & \textit{33825.663} & \textit{3.220} \\ \hline
+\textit{4500} & \textit{1500} & \textit{19.6/26} & \textit{33588.590} & \textit{3.323} \\ \hline
+\textit{4500} & \textit{1750} & \textit{20.55/26} & \textit{33822.639} & \textit{3.551} \\ \hline
+\textit{4500} & \textit{2000} & \textit{16.0/26} & \textit{32890.801} & \textit{3.755} \\ \hline
+\textit{4500} & \textit{2250} & \textit{23.2/26} & \textit{34312.671} & \textit{4.113} \\ \hline
+\textit{4500} & \textit{2500} & \textit{20.6/26} & \textit{33831.736} & \textit{4.521} \\ \hline
+\textit{4500} & \textit{2750} & \textit{19.35/26} & \textit{33582.728} & \textit{4.541} \\ \hline
+\textit{4500} & \textit{3000} & \textit{18.15/26} & \textit{33373.385} & \textit{4.619} \\ \hline
+\textit{4500} & \textit{3250} & \textit{22.45/26} & \textit{34247.870} & \textit{4.789} \\ \hline
+\end{tabular}
+\end{table}\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME \\ \hline
+\textit{4500} & \textit{3500} & \textit{18.3/26} & \textit{33403.400} & \textit{4.821} \\ \hline
+\textit{4500} & \textit{3750} & \textit{20.35/26} & \textit{33802.966} & \textit{4.831} \\ \hline
+\textit{4500} & \textit{4000} & \textit{16.15/26} & \textit{32933.425} & \textit{4.836} \\ \hline
+\textit{5000} & \textit{500} & \textit{17.25/26} & \textit{33107.772} & \textit{2.128} \\ \hline
+\textit{5000} & \textit{750} & \textit{18.4/26} & \textit{33397.089} & \textit{2.611} \\ \hline
+\textit{5000} & \textit{1000} & \textit{22.05/26} & \textit{34097.879} & \textit{2.858} \\ \hline
+\textit{5000} & \textit{1250} & \textit{19.4/26} & \textit{33594.827} & \textit{3.146} \\ \hline
+\textit{5000} & \textit{1500} & \textit{22.4/26} & \textit{34290.460} & \textit{3.365} \\ \hline
+\textit{5000} & \textit{1750} & \textit{20.0/26} & \textit{33644.475} & \textit{3.587} \\ \hline
+\textit{5000} & \textit{2000} & \textit{20.35/26} & \textit{33812.415} & \textit{3.849} \\ \hline
+\textit{5000} & \textit{2250} & \textit{20.7/26} & \textit{33857.588} & \textit{4.467} \\ \hline
+\textit{5000} & \textit{2500} & \textit{21.4/26} & \textit{34031.451} & \textit{4.644} \\ \hline
+\textit{5000} & \textit{2750} & \textit{19.5/26} & \textit{33637.364} & \textit{4.742} \\ \hline
+\textit{5000} & \textit{3000} & \textit{18.6/26} & \textit{33392.188} & \textit{4.962} \\ \hline
+\textit{5000} & \textit{3250} & \textit{23.8/26} & \textit{34499.712} & \textit{5.128} \\ \hline
+\textit{5000} & \textit{3500} & \textit{20.6/26} & \textit{33821.071} & \textit{5.268} \\ \hline
+\textit{5000} & \textit{3750} & \textit{20.4/26} & \textit{33829.606} & \textit{5.324} \\ \hline
+\textit{5000} & \textit{4000} & \textit{18.25/26} & \textit{33400.960} & \textit{5.389} \\ \hline
+\textit{5500} & \textit{500} & \textit{17.75/26} & \textit{33321.251} & \textit{2.063} \\ \hline
+\rowcolor{green}
+\textit{5500} & \textit{750} & \textit{24.45/26} & \textit{34649.691} & \textit{2.395} \\ \hline
+\textit{5500} & \textit{1000} & \textit{21.75/26} & \textit{34010.896} & \textit{2.706} \\ \hline
+\textit{5500} & \textit{1250} & \textit{22.75/26} & \textit{34278.783} & \textit{3.221} \\ \hline
+\textit{5500} & \textit{1500} & \textit{19.0/26} & \textit{33600.496} & \textit{3.344} \\ \hline
+\textit{5500} & \textit{1750} & \textit{22.8/26} & \textit{34213.551} & \textit{3.865} \\ \hline
+\textit{5500} & \textit{2000} & \textit{22.55/26} & \textit{34275.536} & \textit{4.183} \\ \hline
+\textit{5500} & \textit{2250} & \textit{22.95/26} & \textit{34261.244} & \textit{4.421} \\ \hline
+\textit{5500} & \textit{2500} & \textit{21.55/26} & \textit{34057.349} & \textit{4.649} \\ \hline
+\textit{5500} & \textit{2750} & \textit{18.2/26} & \textit{33363.244} & \textit{4.852} \\ \hline
+\textit{5500} & \textit{3000} & \textit{21.6/26} & \textit{34050.598} & \textit{5.028} \\ \hline
+\textit{5500} & \textit{3250} & \textit{21.3/26} & \textit{34044.320} & \textit{5.355} \\ \hline
+\textit{5500} & \textit{3500} & \textit{20.5/26} & \textit{33816.754} & \textit{5.426} \\ \hline
+\textit{5500} & \textit{3750} & \textit{20.9/26} & \textit{33789.138} & \textit{5.594} \\ \hline
+\textit{5500} & \textit{4000} & \textit{23.6/26} & \textit{34495.810} & \textit{5.758} \\ \hline
+\textit{6000} & \textit{500} & \textit{13.1/26} & \textit{32414.889} & \textit{2.085} \\ \hline
+\end{tabular}
+\end{table}\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME \\ \hline
+\textit{6000} & \textit{750} & \textit{18.25/26} & \textit{33369.841} & \textit{2.690} \\ \hline
+\textit{6000} & \textit{1000} & \textit{20.7/26} & \textit{33816.953} & \textit{2.899} \\ \hline
+\textit{6000} & \textit{1250} & \textit{23.5/26} & \textit{34489.919} & \textit{3.252} \\ \hline
+\textit{6000} & \textit{1500} & \textit{19.55/26} & \textit{33598.492} & \textit{3.619} \\ \hline
+\textit{6000} & \textit{1750} & \textit{19.45/26} & \textit{33605.130} & \textit{4.009} \\ \hline
+\textit{6000} & \textit{2000} & \textit{21.65/26} & \textit{34033.244} & \textit{4.115} \\ \hline
+\textit{6000} & \textit{2250} & \textit{22.4/26} & \textit{34272.127} & \textit{4.306} \\ \hline
+\textit{6000} & \textit{2500} & \textit{18.3/26} & \textit{33357.906} & \textit{4.431} \\ \hline
+\textit{6000} & \textit{2750} & \textit{20.4/26} & \textit{33826.012} & \textit{4.720} \\ \hline
+\textit{6000} & \textit{3000} & \textit{20.8/26} & \textit{33855.435} & \textit{5.080} \\ \hline
+\textit{6000} & \textit{3250} & \textit{16.15/26} & \textit{32933.631} & \textit{5.425} \\ \hline
+\textit{6000} & \textit{3500} & \textit{21.55/26} & \textit{34038.592} & \textit{5.485} \\ \hline
+\textit{6000} & \textit{3750} & \textit{21.7/26} & \textit{34039.118} & \textit{5.800} \\ \hline
+\textit{6000} & \textit{4000} & \textit{21.7/26} & \textit{34044.251} & \textit{6.004} \\ \hline
+\textit{6500} & \textit{500} & \textit{16.7/26} & \textit{33018.769} & \textit{2.095} \\ \hline
+\textit{6500} & \textit{750} & \textit{22.5/26} & \textit{34222.895} & \textit{2.533} \\ \hline
+\textit{6500} & \textit{1000} & \textit{21.45/26} & \textit{33998.819} & \textit{3.052} \\ \hline
+\textit{6500} & \textit{1250} & \textit{20.55/26} & \textit{33822.504} & \textit{3.054} \\ \hline
+\textit{6500} & \textit{1500} & \textit{23.95/26} & \textit{34480.043} & \textit{3.525} \\ \hline
+\textit{6500} & \textit{1750} & \textit{16.0/26} & \textit{32946.847} & \textit{3.671} \\ \hline
+\textit{6500} & \textit{2000} & \textit{21.55/26} & \textit{34033.611} & \textit{4.127} \\ \hline
+\rowcolor{green}
+\textit{6500} & \textit{2250} & \textit{24.25/26} & \textit{34527.574} & \textit{4.154} \\ \hline
+\textit{6500} & \textit{2500} & \textit{20.6/26} & \textit{33788.325} & \textit{4.655} \\ \hline
+\textit{6500} & \textit{2750} & \textit{20.05/26} & \textit{33796.004} & \textit{4.879} \\ \hline
+\textit{6500} & \textit{3000} & \textit{19.4/26} & \textit{33594.285} & \textit{5.102} \\ \hline
+\textit{6500} & \textit{3250} & \textit{20.9/26} & \textit{33815.324} & \textit{5.308} \\ \hline
+\textit{6500} & \textit{3500} & \textit{21.65/26} & \textit{34047.369} & \textit{5.577} \\ \hline
+\textit{6500} & \textit{3750} & \textit{16.7/26} & \textit{33109.996} & \textit{5.763} \\ \hline
+\textit{6500} & \textit{4000} & \textit{20.5/26} & \textit{33872.405} & \textit{5.901} \\ \hline
+\textit{7000} & \textit{500} & \textit{18.45/26} & \textit{33370.512} & \textit{1.983} \\ \hline
+\textit{7000} & \textit{750} & \textit{21.2/26} & \textit{33892.193} & \textit{2.591} \\ \hline
+\textit{7000} & \textit{1000} & \textit{23.75/26} & \textit{34486.746} & \textit{3.035} \\ \hline
+\textit{7000} & \textit{1250} & \textit{23.85/26} & \textit{34493.221} & \textit{3.171} \\ \hline
+\textit{7000} & \textit{1500} & \textit{19.5/26} & \textit{33605.315} & \textit{3.472} \\ \hline
+\end{tabular}
+\end{table}\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME \\ \hline
+\textit{7000} & \textit{1750} & \textit{20.25/26} & \textit{33830.393} & \textit{3.769} \\ \hline
+\textit{7000} & \textit{2000} & \textit{20.0/26} & \textit{33824.729} & \textit{3.973} \\ \hline
+\textit{7000} & \textit{2250} & \textit{20.15/26} & \textit{33821.541} & \textit{4.303} \\ \hline
+\textit{7000} & \textit{2500} & \textit{20.45/26} & \textit{33847.022} & \textit{4.499} \\ \hline
+\textit{7000} & \textit{2750} & \textit{22.8/26} & \textit{34270.037} & \textit{4.729} \\ \hline
+\textit{7000} & \textit{3000} & \textit{21.45/26} & \textit{34041.022} & \textit{4.890} \\ \hline
+\textit{7000} & \textit{3250} & \textit{20.8/26} & \textit{33827.676} & \textit{5.351} \\ \hline
+\textit{7000} & \textit{3500} & \textit{22.45/26} & \textit{34285.314} & \textit{5.794} \\ \hline
+\textit{7000} & \textit{3750} & \textit{21.4/26} & \textit{34049.506} & \textit{5.751} \\ \hline
+\textit{7000} & \textit{4000} & \textit{22.6/26} & \textit{34248.752} & \textit{5.969} \\ \hline
+\textit{7500} & \textit{500} & \textit{19.9/26} & \textit{33680.438} & \textit{2.033} \\ \hline
+\textit{7500} & \textit{750} & \textit{20.8/26} & \textit{33835.412} & \textit{2.559} \\ \hline
+\textit{7500} & \textit{1000} & \textit{19.9/26} & \textit{33583.160} & \textit{2.954} \\ \hline
+\textit{7500} & \textit{1250} & \textit{18.5/26} & \textit{33408.051} & \textit{3.165} \\ \hline
+\textit{7500} & \textit{1500} & \textit{17.25/26} & \textit{33250.805} & \textit{3.246} \\ \hline
+\textit{7500} & \textit{1750} & \textit{17.0/26} & \textit{33107.764} & \textit{3.841} \\ \hline
+\textit{7500} & \textit{2000} & \textit{20.45/26} & \textit{33797.933} & \textit{3.794} \\ \hline
+\textit{7500} & \textit{2250} & \textit{21.95/26} & \textit{34048.771} & \textit{4.235} \\ \hline
+\textit{7500} & \textit{2500} & \textit{22.65/26} & \textit{34269.734} & \textit{4.790} \\ \hline
+\textit{7500} & \textit{2750} & \textit{21.25/26} & \textit{34044.006} & \textit{4.818} \\ \hline
+\textit{7500} & \textit{3000} & \textit{21.2/26} & \textit{34054.219} & \textit{5.001} \\ \hline
+\textit{7500} & \textit{3250} & \textit{20.25/26} & \textit{33823.190} & \textit{5.384} \\ \hline
+\textit{7500} & \textit{3500} & \textit{22.6/26} & \textit{34273.482} & \textit{5.911} \\ \hline
+\rowcolor{green}
+\textit{7500} & \textit{3750} & \textit{24.15/26} & \textit{34493.126} & \textit{5.912} \\ \hline
+\textit{7500} & \textit{4000} & \textit{23.15/26} & \textit{34317.777} & \textit{6.029} \\ \hline
+\textit{8000} & \textit{500} & \textit{19.25/26} & \textit{33604.371} & \textit{2.210} \\ \hline
+\textit{8000} & \textit{750} & \textit{21.9/26} & \textit{33964.710} & \textit{2.443} \\ \hline
+\textit{8000} & \textit{1000} & \textit{19.55/26} & \textit{33626.252} & \textit{2.895} \\ \hline
+\textit{8000} & \textit{1250} & \textit{21.55/26} & \textit{33983.156} & \textit{3.024} \\ \hline
+\textit{8000} & \textit{1500} & \textit{15.95/26} & \textit{32930.969} & \textit{3.217} \\ \hline
+\textit{8000} & \textit{1750} & \textit{23.05/26} & \textit{34277.256} & \textit{3.959} \\ \hline
+\textit{8000} & \textit{2000} & \textit{21.75/26} & \textit{34051.127} & \textit{4.147} \\ \hline
+\textit{8000} & \textit{2250} & \textit{20.15/26} & \textit{33829.559} & \textit{4.112} \\ \hline
+\textit{8000} & \textit{2500} & \textit{19.55/26} & \textit{33579.358} & \textit{4.659} \\ \hline
+\end{tabular}
+\end{table}\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME \\ \hline
+\textit{8000} & \textit{2750} & \textit{18.55/26} & \textit{33424.582} & \textit{4.502} \\ \hline
+\textit{8000} & \textit{3000} & \textit{21.65/26} & \textit{34032.948} & \textit{5.098} \\ \hline
+\textit{8000} & \textit{3250} & \textit{21.85/26} & \textit{34047.865} & \textit{5.451} \\ \hline
+\textit{8000} & \textit{3500} & \textit{18.8/26} & \textit{33587.871} & \textit{5.740} \\ \hline
+\textit{8000} & \textit{3750} & \textit{18.8/26} & \textit{33606.634} & \textit{5.935} \\ \hline
+\textit{8000} & \textit{4000} & \textit{19.8/26} & \textit{33594.756} & \textit{6.435} \\ \hline
+\textit{8500} & \textit{500} & \textit{20.6/26} & \textit{33878.819} & \textit{1.967} \\ \hline
+\textit{8500} & \textit{750} & \textit{19.3/26} & \textit{33574.138} & \textit{2.428} \\ \hline
+\textit{8500} & \textit{1000} & \textit{20.1/26} & \textit{33802.608} & \textit{3.245} \\ \hline
+\textit{8500} & \textit{1250} & \textit{22.8/26} & \textit{34241.200} & \textit{3.004} \\ \hline
+\textit{8500} & \textit{1500} & \textit{20.95/26} & \textit{33844.691} & \textit{3.424} \\ \hline
+\textit{8500} & \textit{1750} & \textit{18.85/26} & \textit{33622.356} & \textit{3.642} \\ \hline
+\rowcolor{green}
+\textit{8500} & \textit{2000} & \textit{24.25/26} & \textit{34500.958} & \textit{4.119} \\ \hline
+\textit{8500} & \textit{2250} & \textit{21.5/26} & \textit{34039.565} & \textit{4.022} \\ \hline
+\textit{8500} & \textit{2500} & \textit{15.1/26} & \textit{32723.537} & \textit{4.325} \\ \hline
+\textit{8500} & \textit{2750} & \textit{17.85/26} & \textit{33183.040} & \textit{5.079} \\ \hline
+\textit{8500} & \textit{3000} & \textit{20.9/26} & \textit{33882.594} & \textit{5.057} \\ \hline
+\textit{8500} & \textit{3250} & \textit{19.35/26} & \textit{33581.268} & \textit{5.024} \\ \hline
+\textit{8500} & \textit{3500} & \textit{21.05/26} & \textit{33824.266} & \textit{5.650} \\ \hline
+\textit{8500} & \textit{3750} & \textit{17.45/26} & \textit{33164.632} & \textit{5.856} \\ \hline
+\textit{8500} & \textit{4000} & \textit{19.0/26} & \textit{33383.296} & \textit{6.296} \\ \hline
+\textit{9000} & \textit{500} & \textit{16.65/26} & \textit{33065.081} & \textit{1.995} \\ \hline
+\textit{9000} & \textit{750} & \textit{19.2/26} & \textit{33527.772} & \textit{2.633} \\ \hline
+\textit{9000} & \textit{1000} & \textit{17.7/26} & \textit{33171.689} & \textit{2.894} \\ \hline
+\textit{9000} & \textit{1250} & \textit{23.75/26} & \textit{34501.204} & \textit{3.461} \\ \hline
+\textit{9000} & \textit{1500} & \textit{22.45/26} & \textit{34265.240} & \textit{3.413} \\ \hline
+\textit{9000} & \textit{1750} & \textit{15.7/26} & \textit{32919.922} & \textit{3.667} \\ \hline
+\textit{9000} & \textit{2000} & \textit{21.0/26} & \textit{33835.855} & \textit{3.899} \\ \hline
+\textit{9000} & \textit{2250} & \textit{19.25/26} & \textit{33616.781} & \textit{4.152} \\ \hline
+\textit{9000} & \textit{2500} & \textit{21.65/26} & \textit{34039.237} & \textit{4.401} \\ \hline
+\textit{9000} & \textit{2750} & \textit{21.8/26} & \textit{34039.911} & \textit{4.915} \\ \hline
+\textit{9000} & \textit{3000} & \textit{22.45/26} & \textit{34240.700} & \textit{5.035} \\ \hline
+\textit{9000} & \textit{3250} & \textit{22.4/26} & \textit{34251.975} & \textit{5.233} \\ \hline
+\textit{9000} & \textit{3500} & \textit{21.95/26} & \textit{34049.739} & \textit{5.905} \\ \hline
+\end{tabular}
+\end{table}\begin{table}[]
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME \\ \hline
+\textit{9000} & \textit{3750} & \textit{22.6/26} & \textit{34272.145} & \textit{6.138} \\ \hline
+\textit{9000} & \textit{4000} & \textit{19.8/26} & \textit{33645.496} & \textit{6.020} \\ \hline
+\textit{9500} & \textit{500} & \textit{19.0/26} & \textit{33605.703} & \textit{2.017} \\ \hline
+\textit{9500} & \textit{750} & \textit{20.0/26} & \textit{33793.597} & \textit{2.356} \\ \hline
+\textit{9500} & \textit{1000} & \textit{19.05/26} & \textit{33541.912} & \textit{2.930} \\ \hline
+\textit{9500} & \textit{1250} & \textit{22.55/26} & \textit{34270.494} & \textit{3.254} \\ \hline
+\textit{9500} & \textit{1500} & \textit{23.7/26} & \textit{34502.219} & \textit{3.539} \\ \hline
+\textit{9500} & \textit{1750} & \textit{22.2/26} & \textit{34070.951} & \textit{3.597} \\ \hline
+\textit{9500} & \textit{2000} & \textit{22.35/26} & \textit{34252.691} & \textit{3.954} \\ \hline
+\textit{9500} & \textit{2250} & \textit{21.4/26} & \textit{34051.629} & \textit{4.292} \\ \hline
+\textit{9500} & \textit{2500} & \textit{18.45/26} & \textit{33392.220} & \textit{4.896} \\ \hline
+\textit{9500} & \textit{2750} & \textit{18.6/26} & \textit{33354.364} & \textit{4.727} \\ \hline
+\textit{9500} & \textit{3000} & \textit{19.6/26} & \textit{33614.605} & \textit{5.061} \\ \hline
+\textit{9500} & \textit{3250} & \textit{17.05/26} & \textit{33134.931} & \textit{5.493} \\ \hline
+\textit{9500} & \textit{3500} & \textit{22.0/26} & \textit{34044.115} & \textit{5.749} \\ \hline
+\textit{9500} & \textit{3750} & \textit{21.0/26} & \textit{33879.862} & \textit{5.985} \\ \hline
+\textit{9500} & \textit{4000} & \textit{23.85/26} & \textit{34498.623} & \textit{5.934} \\ \hline
+\textit{10000} & \textit{500} & \textit{17.95/26} & \textit{33275.496} & \textit{1.933} \\ \hline
+\textit{10000} & \textit{750} & \textit{22.65/26} & \textit{34325.953} & \textit{2.717} \\ \hline
+\textit{10000} & \textit{1000} & \textit{21.1/26} & \textit{34010.048} & \textit{2.756} \\ \hline
+\textit{10000} & \textit{1250} & \textit{20.25/26} & \textit{33799.406} & \textit{3.477} \\ \hline
+\textit{10000} & \textit{1500} & \textit{23.7/26} & \textit{34487.933} & \textit{3.473} \\ \hline
+\textit{10000} & \textit{1750} & \textit{20.75/26} & \textit{33817.405} & \textit{3.824} \\ \hline
+\textit{10000} & \textit{2000} & \textit{18.4/26} & \textit{33390.455} & \textit{4.113} \\ \hline
+\textit{10000} & \textit{2250} & \textit{20.5/26} & \textit{33825.609} & \textit{4.141} \\ \hline
+\textit{10000} & \textit{2500} & \textit{20.15/26} & \textit{33788.931} & \textit{4.487} \\ \hline
+\textit{10000} & \textit{2750} & \textit{14.95/26} & \textit{32678.388} & \textit{5.189} \\ \hline
+\textit{10000} & \textit{3000} & \textit{19.35/26} & \textit{33573.925} & \textit{4.903} \\ \hline
+\textit{10000} & \textit{3250} & \textit{17.95/26} & \textit{33361.965} & \textit{5.276} \\ \hline
+\textit{10000} & \textit{3500} & \textit{17.7/26} & \textit{33164.616} & \textit{5.726} \\ \hline
+\textit{10000} & \textit{3750} & \textit{22.85/26} & \textit{34268.150} & \textit{5.794} \\ \hline
+\textit{10000} & \textit{4000} & \textit{17.0/26} & \textit{33110.239} & \textit{6.153} \\ \hline
+\end{tabular}
+\end{table}
