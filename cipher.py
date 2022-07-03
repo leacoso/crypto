@@ -28,7 +28,7 @@ def decipher(ctext ,cle):
 def genKey(cle,c):
     if(cle==""):                                    # Cas de base: generation d'une cle
         res="".join(random.shuffle(list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")))
-        
+
     else:                                           # Modification de la cle existante
         l=list(cle)
         for i in range(0,c): 
@@ -96,7 +96,7 @@ def dict_mono_grams_de_texte(text): # On construit un dictionnaire avec l'occure
 
 ########################################################################################################  
   
-def hillClimbing(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle):
+def hillClimbing(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle,compare):
     scorePar=0
     cmpS=0   
     if cle == "":                                        # Compteur stationaire                                           
@@ -111,7 +111,7 @@ def hillClimbing(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle):
         cleEnf=genKey(clePar,1)
         deciphered=decipher(text,cleEnf)
         scoreEnf=fitness(deciphered,dictionnaire)
-        if((scorePar) < (scoreEnf)):
+        if(compare (scorePar,scoreEnf)):
             scorePar=scoreEnf
             clePar=cleEnf
             cmpS=0
