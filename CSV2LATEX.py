@@ -6,7 +6,7 @@ def CSV2LATEX(FILENAME,size):
     size-=1
     cmpglob=0
     mxLINE=[]
-    mxVALUE=21
+    mxVALUE=25.5
     
     Fname=FILENAME.split("/")[-1]
     print(Fname)
@@ -21,12 +21,13 @@ def CSV2LATEX(FILENAME,size):
             file_reader = csv.reader(csvfile,delimiter=',')
             for row in  file_reader:
                 cmp=0
+                
                 for e in row:
                     if(cmp!=size):
                         LINE+="\\textit{"+str(e)+"} & "
                         #tex.write("\\textit{"+str(e)+"} & ")
                         if(cmp==size-2): 
-                            if(decimal.Decimal((e.split("/"))[0])>=0):
+                            if(decimal.Decimal((e.split("/"))[0])>=24):
                                 writ=1
                                 cmpglob+=1
                                 if(decimal.Decimal((e.split("/"))[0])>=mxVALUE):
@@ -53,7 +54,6 @@ def CSV2LATEX(FILENAME,size):
 
                 LINE=""
                 if(cmpglob>33):
-                    print("HI\n")
                     tex.write("\end{tabular}\n\end{table}")
                     tex.write("\\begin{table}[]\n\\begin{tabular}{|"+("l|"*(size+1))+"}\n\hline\n")
                     tex.write("Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME \\\ \hline\n")

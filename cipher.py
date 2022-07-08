@@ -59,10 +59,21 @@ def fitness1(text,dictionaire):
 
 def fitness2(text,dico_langue):  
     dico_text = dict_mono_grams_de_texte(text)
-    x=[v for k, v in dico_text.items() if k!="-n"]
-    y=[v for k, v in dico_langue.items() if k!="-n" ]
-    r = np.corrcoef(x, y)
-    return r[0][1]
+    X=[v for k, v in dico_text.items() if k!="-n"]
+    Y=[v for k, v in dico_langue.items() if k!="-n" ]
+    # prend deux listes de meme taille
+    # calcule la correlation lineaire de Pearson
+    mX = math.fsum(X) / len(X)
+    mY = math.fsum(Y) / len(Y)
+    num = 0
+    denX = 0
+    denY = 0
+    for i in range(len(X)):
+        num = num + (X[i] - mX) * (Y[i] - mY)
+        denX = denX + (X[i] - mX) * (X[i] - mX)
+        denY = denY + (Y[i] - mY) * (Y[i] - mY)
+    return num / math.sqrt(denX * denY)
+    
     
 ########################################################################################################
 
