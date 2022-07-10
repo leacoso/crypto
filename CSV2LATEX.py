@@ -7,13 +7,13 @@ def CSV2LATEX(FILENAME,size):
     cmpglob=0
     mxLINE=[]
     mxVALUE=25.5
-    
+    colomNAME="Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME"
     Fname=FILENAME.split("/")[-1]
     print(Fname)
     with open ("./LATEX/TABLE_"+Fname+".txt",'w+') as tex:
         tex.write("\\begin{table}[]\n\centering \n\caption{"+(Fname.split("_")[-1]).split(".")[0]+"}\n\\vspace{10mm}\n\\begin{tabular}{|"+("l|"*(size+1))+"}\n\hline\n")
         currentLINE+=6
-        tex.write("Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME \\\ \hline\n")
+        tex.write(colomNAME+" \\\ \hline\n")
         currentLINE+=1
         LINE=""
         writ=0
@@ -56,7 +56,7 @@ def CSV2LATEX(FILENAME,size):
                 if(cmpglob>33):
                     tex.write("\end{tabular}\n\end{table}")
                     tex.write("\\begin{table}[]\n\\begin{tabular}{|"+("l|"*(size+1))+"}\n\hline\n")
-                    tex.write("Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME \\\ \hline\n")
+                    tex.write(colomNAME+" \\\ \hline\n")
                     currentLINE+=5
                     cmpglob=0
 
@@ -76,7 +76,7 @@ def CSV2LATEX(FILENAME,size):
         
 n=len(sys.argv)
 if(n<=1):
-    print("run by using command :\npython CSV2LATEX.py  <./path/file1.csv> <./path/file2.csv> <..> ...\n")
+    sys.exit("run by using command :\npython CSV2LATEX.py  <./path/file1.csv> <./path/file2.csv> <..> ...\n")
     
 for i in range(1,n): 
     CSV2LATEX(sys.argv[i],5)            

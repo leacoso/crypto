@@ -3,7 +3,19 @@ import math
 import random 
 import numpy as np #pip install numpy 
 import matplotlib.pyplot as plt #python -m pip install -U matplotlib
+########################################################################################################
 
+def txt(text):
+    cmp=0
+    res=""
+    for c in text:
+        res+=c
+        if cmp>=100:
+            cmp=0
+            res+="\n"
+        else :
+            cmp+=1
+    return res
 ########################################################################################################
 
 def encipher(text ,cle):
@@ -18,8 +30,10 @@ def encipher(text ,cle):
 def decipher(ctext ,cle):
     res=""
     c=''
+    
     for c in ctext:
         res+=chr(cle.index(c)+65)
+        
         
     return res  
 
@@ -106,7 +120,7 @@ def dict_mono_grams_de_texte(text): # On construit un dictionnaire avec l'occure
     return dico
 
 ########################################################################################################  
-  
+alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
 def hillClimbing(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle,compare):
     scorePar=0
     cmpS=0   
@@ -131,10 +145,10 @@ def hillClimbing(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle,compare):
         i+=1
     #print("\nTEXTE CHIFFRE : \n"+text+"\n\n  Score initial : "+str(score_init)+"\n")
     #print("\nTEXTE DECHIFFRE : \n"+decipher(text,clePar)+"\n\n  Score final :  "+str(scorePar)+"\n  Cle appliquee : "+clePar)
-    #fichier.ecriture_fichier("./text/textDECHIFRE.txt",decipher(text,clePar)+"\n Avec la cle :\n"+clePar)
+    fichier.ecriture_fichier("./text/textDECHIFRE.txt","text de depart: \n\n"+txt(text)+"\n\ntext obtenu:\n\n"+txt(decipher(text,clePar))+"\n\n Avec la cle :\n\n"+clePar+"\n\n")
     return clePar
 
-########################################################################################################
+######################################################################################################
 
 def courbe(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle):
     n = dictionnaire["n"]

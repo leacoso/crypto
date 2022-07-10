@@ -2,9 +2,9 @@ import fichier
 import cipher 
 import time
 ########################################################################################################
-cle_de_cryptage="AZERQSDFWXCVTGBYHNUJPMILOK"
-NBITERGLOB= 4000
-NBITERSTATIC = 1300
+cle_de_cryptage="WQAZSXCDERFVTYGHBNUJIKPLOM"
+NBITERGLOB= 3000
+NBITERSTATIC = 1500
 path_stats = "./stats_EN/"
 score = 0
 ################################################################################################
@@ -32,8 +32,8 @@ text=fichier.NETTOYER_lire_fichier("./text/textCLAIRE_EN.txt")
 text=cipher.encipher(text,cle_de_cryptage)
 #key = cryptanalyse(text,4,"",cipher.fitness1)
 tps1 = time.time()
-key=cryptanalyse(text,2,alphabet,cipher.fitness1,comp1)
-
+key=cryptanalyse(text,5,alphabet,cipher.fitness1,comp1)
+#print("corélation : " +str(cipher.fitness2(cipher.decipher(text,"ZAERQSFDWXCVHGBYTNUJPMILOK"),dictionnaire)))
 #print("fit2: " +str(cipher.fitness2(cipher.decipher(text,key),dictionnaire)))
 tps2 =  time.time()
 
