@@ -5,17 +5,30 @@ import timeit
 import os
 path_stats = "./stats_EN/"
 
+#A scrypt to creat files of type .csv with the stats of the algorithm Hill Climbing produced by
+#varying the variables NBITERGLOB and NBITERSTATIC 
+
 ########################################################################################################
 
 def clear():
+    #clear the screan
      os.system('cls' if os.name == 'nt' else 'clear')
 
 def comp1 (x,y):
+    #compare x and y 
     return x<y
     
 ########################################################################################################
 
 def creer_stats_ngram(text,n,cle_depart,fileNAME):
+    #(text : string )
+    #(n : int )
+    #(cle_depart : string ) length = 26
+    #(fileNAME : string )
+    #Creat stats by varying the variables NBITERGLOB and NBITERSTATIC in the algorithm Hill Climbing 
+    #and writes them in a file of type .csv
+
+
     clear()
     key=""
     global_BORN_inf=2000
@@ -55,5 +68,8 @@ cle_de_cryptage="QASZDEFRGTHYJUKILOMPWXCVBN"
 alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 text=fichier.NETTOYER_lire_fichier("./text/textCLAIRE_EN.txt")
 text=cipher.encipher(text,cle_de_cryptage)
+creer_stats_ngram(text,2,alphabet,"./stats_optimales_EN/iterations_optimales_BIGRAMS.csv")
 creer_stats_ngram(text,3,alphabet,"./stats_optimales_EN/iterations_optimales_TRIGRAMMES.csv")
+creer_stats_ngram(text,4,alphabet,"./stats_optimales_EN/iterations_optimales_TETRAGRAMMES.csv")
+creer_stats_ngram(text,5,alphabet,"./stats_optimales_EN/iterations_optimales_PENTAGRAMMES.csv")
 

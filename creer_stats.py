@@ -1,5 +1,8 @@
 import sys
 import fichier
+
+#a scrypt to creat our own ngramme stats from a text 
+
 ########################################################################################################
 def next(ngram, n, c):
     if len(ngram) == n:

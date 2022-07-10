@@ -5,12 +5,20 @@ import timeit
 import os
 path_stats = "./stats_EN/"
 
+#A scrypt to creat a file of type .csv with the stats produced by applying the algorithm Hill Climbing
+#twice with 2 ngrammes and varying the variables NBITERGLOB and NBITERSTATIC  
+
 ########################################################################################################
 def clear():
      os.system('cls' if os.name == 'nt' else 'clear')
 ########################################################################################################
 
 def creer_stats_fit(text,cle_depart,fileNAME):
+    #(text : string )
+    #(cle_depart : string )legth = 26
+    #(fileNAME : string )
+
+    
     clear()
     key=""
     global_BORN_inf=1000

@@ -4,7 +4,7 @@ from colorama import Fore, Back #pip install colorama
 ########################################################################################################
 
 def print_progress_bar(index, total, label):
-    
+    #print a progress bar on the terminal 
     n_bar = 50  # Progress bar width
     progress = index / total
     sys.stdout.write(Fore.RED +Back.GREEN+'\r')
@@ -14,7 +14,11 @@ def print_progress_bar(index, total, label):
     
 ########################################################################################################
 
-def lire_fichier(nomfichier):    
+def lire_fichier(nomfichier):   
+    #(nomfichier : string)
+    #reads the file (nomfichier) and returns it as a string  
+
+
     res=""
     with open(nomfichier, 'r') as fichier:
         for line in fichier:
@@ -24,12 +28,21 @@ def lire_fichier(nomfichier):
 
 ########################################################################################################
 
-def ecriture_fichier(nomfichier,chaine): 
+def ecriture_fichier(nomfichier,chaine):
+    #(nomfichier : string)
+    #(chaine : string )
+    # writes the string(chaine) in the file (nomfichier)
+     
+     
     with open(nomfichier, 'w') as fichier:
         fichier.write(chaine)
     
 ########################################################################################################
-def lire_ngrame(nomfichier):    
+def lire_ngrame(nomfichier):   
+    #(nomfichier : string)
+    #returns the dictionary created by reading the file (nomfichier)
+
+
     res={}
     with open(nomfichier, 'r', errors='ignore') as fichier:
         for line in fichier:
@@ -43,6 +56,11 @@ def lire_ngrame(nomfichier):
 ########################################################################################################
 
 def NETTOYER_lire_fichier(nomfichier):
+    #(nomfichier : string)
+    #reads the file (nomfichier) and returns it as a string 
+    #that containes only the alphabet letters all in capital form
+
+
     res=""
     with open(nomfichier, 'r') as fichier:
         for line in fichier:
@@ -55,6 +73,8 @@ def NETTOYER_lire_fichier(nomfichier):
 ########################################################################################################<
 
 def nettoyer_texte(text): 
+    #(text : string )
+    #reform the string (text) using the form  : (only capital letters from A-Z)
     res = ""
     for i in text: 
         if ord(i.upper()) in range(65,98):
