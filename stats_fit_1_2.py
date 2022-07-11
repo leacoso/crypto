@@ -3,7 +3,7 @@ import cipher
 import csv
 import timeit
 import os
-path_stats = "./stats_EN/"
+path_stats = "./Dict_ngramm/stats_EN/"
 
 #A scrypt to creat a file of type .csv with the stats produced by applying the algorithm Hill Climbing
 #twice with 2 ngrammes and varying the variables NBITERGLOB and NBITERSTATIC  
@@ -59,8 +59,8 @@ def creer_stats_fit(text,cle_depart,fileNAME):
 ########################################################################################################
 
 cle_de_cryptage="QASZDEFRGTHYJUKILOMPWXCVBN"
-alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-text=fichier.NETTOYER_lire_fichier("./text/textCLAIRE_EN.txt")
+
+text=fichier.NETTOYER_lire_fichier("./text/EN/txtCLAIRE_1500_EN.txt")
 text=cipher.encipher(text,cle_de_cryptage)
-creer_stats_fit(text,alphabet,"./stats_GEN/fit.csv")
+creer_stats_fit(text,cipher.alphabet,"./stats_ngramm/stats_GEN/fit.csv")
 

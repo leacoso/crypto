@@ -5,7 +5,7 @@ import time
 cle_de_cryptage="WQAZSXCDERFVTYGHBNUJIKPLOM"
 NBITERGLOB= 3000
 NBITERSTATIC = 1500
-path_stats = "./stats_EN/"
+path_stats = "./Dict_ngramm/stats_EN/"
 score = 0
 ################################################################################################
 def breakcrypt(text,n,cle_depart,fitness,compare):
@@ -15,7 +15,7 @@ def breakcrypt(text,n,cle_depart,fitness,compare):
     print("  Clé  cryptage : "+cle_de_cryptage)
     print("\n  Lettres correctes : "+str(cipher.compare_cle(cle_de_cryptage,key))+"/26")
     print("SCORE OBTENU : " +str(fitness(cipher.decipher(text,key),dictionnaire)))
-    print("\n  Score maximal : "+str(fitness(fichier.NETTOYER_lire_fichier("./text/textCLAIRE_EN.txt"),dictionnaire))+"\n")
+    print("\n  Score maximal : "+str(fitness(fichier.NETTOYER_lire_fichier("./text/EN/txtCLAIRE_1500_EN.txt"),dictionnaire))+"\n")
     print("corélation : " +str(cipher.fitness2(cipher.decipher(text,key),dic1)))
 
     return key
@@ -25,14 +25,14 @@ def comp1 (x,y):
     return x<y
 def comp2 (x,y):
     return (abs(x) > abs(y))
-alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ" 
+################################################################################################
 
 dictionnaire=cipher.ngram(1,path_stats)
-text=fichier.NETTOYER_lire_fichier("./text/textCLAIRE_EN.txt")
+text=fichier.NETTOYER_lire_fichier("./text/EN/txtCLAIRE_1500_EN.txt")
 text=cipher.encipher(text,cle_de_cryptage)
 #key = breakcrypt(text,4,"",cipher.fitness1)
 tps1 = time.time()
-key=breakcrypt(text,5,alphabet,cipher.fitness1,comp1)
+key=breakcrypt(text,5,cipher.alphabet,cipher.fitness1,comp1)
 #print("corélation : " +str(cipher.fitness2(cipher.decipher(text,"ZAERQSFDWXCVHGBYTNUJPMILOK"),dictionnaire)))
 #print("fit2: " +str(cipher.fitness2(cipher.decipher(text,key),dictionnaire)))
 tps2 =  time.time()

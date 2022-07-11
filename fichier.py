@@ -1,5 +1,5 @@
 import sys
-from colorama import Fore, Back #pip install colorama
+from colorama import Fore, Back 
 
 ########################################################################################################
 

@@ -2,6 +2,8 @@ import csv
 import sys
 import decimal 
 #A scrypt that creat a LATEX TABLE of stats from multiple .csv files (passed as arguments)
+
+
 def CSV2LATEX(FILENAME,size):
     #(FILENAME : string) ends with .csv
     #(size : int ) number of colums

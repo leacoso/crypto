@@ -1,8 +1,8 @@
 import fichier 
 import math 
 import random 
-import numpy as np #pip install numpy 
-import matplotlib.pyplot as plt #python -m pip install -U matplotlib
+import numpy as np 
+import matplotlib.pyplot as plt 
 
 alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 ########################################################################################################
@@ -121,7 +121,6 @@ def fitness2(text,dico_langue):
         denY = denY + (Y[i] - mY) * (Y[i] - mY)
     return num / math.sqrt(denX * denY)
     
-    
 ########################################################################################################
 
 def compare_cle(c1,c2):
@@ -158,7 +157,7 @@ def dict_mono_grams_de_texte(text):
 
 
     dico = dict()
-    alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    
     for s in alphabet:
         dico[s]=0
     for i in text : 
