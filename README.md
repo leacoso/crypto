@@ -1,4 +1,5 @@
-# RUN cryptanalyse.py   <ngramme>   <FILE_PATH>
+# RUN cryptanalyse on a text by using command
+ cryptanalyse.py  <ngramm> <FILE_PATH>
 ## ( ngramme : int) in [2,5]
 ### (FILE_PATH : string)
 
