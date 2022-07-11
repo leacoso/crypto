@@ -30,7 +30,7 @@ def comp2 (x,y):
 dictionnaire=cipher.ngram(1,path_stats)
 text=fichier.NETTOYER_lire_fichier("./text/EN/txtCLAIRE_1500_EN.txt")
 text=cipher.encipher(text,cle_de_cryptage)
-#key = breakcrypt(text,4,"",cipher.fitness1)
+
 tps1 = time.time()
 key=breakcrypt(text,5,cipher.alphabet,cipher.fitness1,comp1)
 #print("corélation : " +str(cipher.fitness2(cipher.decipher(text,"ZAERQSFDWXCVHGBYTNUJPMILOK"),dictionnaire)))
