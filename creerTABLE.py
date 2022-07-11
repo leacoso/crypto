@@ -32,9 +32,9 @@ def creer_stats_ngram(text,n,cle_depart,fileNAME):
     clear()
     key=""
     global_BORN_inf=2000
-    global_BORN_sup=3000
+    global_BORN_sup=2200
     static_BORN_inf=1000
-    static_BORN_sup=2500
+    static_BORN_sup=1200
     fichier.print_progress_bar(0,global_BORN_sup, "creer_stats_"+str(n)+"gram")
     with open(fileNAME, 'w+') as csvfile:
         filewriter = csv.writer(csvfile, delimiter=',',quotechar='|', quoting=csv.QUOTE_MINIMAL)
@@ -54,7 +54,7 @@ def creer_stats_ngram(text,n,cle_depart,fileNAME):
                     moyennelettres+=cipher.compare_cle(cle_de_cryptage,key)
                     moyennescore+=cipher.fitness1(cipher.decipher(text,key),dictionaire)
                 stop = timeit.default_timer()
-                corr=print("corélation : " +str(cipher.fitness2(cipher.decipher(text,key),dic1)))
+                corr=str(cipher.fitness2(cipher.decipher(text,key),dic1))
                 filewriter.writerow([str(glob),str(static),str(moyennelettres/nb_iter)+"/26",str('{:.3f}'.format(moyennescore/nb_iter)),str('{:.3f}'.format((stop - start)/nb_iter)),corr])
                 static+=250
             fichier.print_progress_bar(glob-global_BORN_inf, global_BORN_sup,"creer_stats_"+str(n)+"gram")

@@ -8,7 +8,7 @@ NBITERSTATIC = 1500
 path_stats = "./stats_EN/"
 score = 0
 ################################################################################################
-def cryptanalyse(text,n,cle_depart,fitness,compare):
+def breakcrypt(text,n,cle_depart,fitness,compare):
     dictionnaire=cipher.ngram(n,path_stats)
     dic1=cipher.ngram(1,path_stats)
     key=cipher.hillClimbing(fitness,text,dictionnaire,NBITERGLOB,NBITERSTATIC,cle_depart,compare)
@@ -30,9 +30,9 @@ alphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 dictionnaire=cipher.ngram(1,path_stats)
 text=fichier.NETTOYER_lire_fichier("./text/textCLAIRE_EN.txt")
 text=cipher.encipher(text,cle_de_cryptage)
-#key = cryptanalyse(text,4,"",cipher.fitness1)
+#key = breakcrypt(text,4,"",cipher.fitness1)
 tps1 = time.time()
-key=cryptanalyse(text,5,alphabet,cipher.fitness1,comp1)
+key=breakcrypt(text,5,alphabet,cipher.fitness1,comp1)
 #print("corélation : " +str(cipher.fitness2(cipher.decipher(text,"ZAERQSFDWXCVHGBYTNUJPMILOK"),dictionnaire)))
 #print("fit2: " +str(cipher.fitness2(cipher.decipher(text,key),dictionnaire)))
 tps2 =  time.time()
