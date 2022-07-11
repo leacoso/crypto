@@ -4,6 +4,8 @@ import decimal
 #A scrypt that creat a LATEX TABLE of stats from multiple .csv files (passed as arguments)
 
 
+
+
 def CSV2LATEX(FILENAME,size):
     #(FILENAME : string) ends with .csv
     #(size : int ) number of colums
@@ -14,8 +16,8 @@ def CSV2LATEX(FILENAME,size):
     size-=1
     cmpglob=0
     mxLINE=[]
-    mxVALUE=25.5
-    colomNAME="Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME"
+    mxVALUE=22
+    colomNAME="Iteration GLOBALE & Iteration LOCAL  & Cle  & SCORE & TIME & Person"
     Fname=FILENAME.split("/")[-1]
     print(Fname)
     with open ("./LATEX/TABLE_"+Fname+".txt",'w+') as tex:
@@ -34,12 +36,13 @@ def CSV2LATEX(FILENAME,size):
                     if(cmp!=size):
                         LINE+="\\textit{"+str(e)+"} & "
                         #tex.write("\\textit{"+str(e)+"} & ")
-                        if(cmp==size-2): 
-                            if(decimal.Decimal((e.split("/"))[0])>=24):
+                        if(cmp==2): 
+                            if(decimal.Decimal((e.split("/"))[0])>=0):
                                 writ=1
                                 cmpglob+=1
                                 if(decimal.Decimal((e.split("/"))[0])>=mxVALUE):
                                 #mxVALUE=decimal.Decimal((e.split("/"))[0])
+                                    print(str(decimal.Decimal((e.split("/"))[0]))+"\n")
                                     mxLINE.append(currentLINE)
                             else :
                                 writ =0
@@ -47,7 +50,7 @@ def CSV2LATEX(FILENAME,size):
                             
                     else :
                         
-                        LINE+="\\textit{"+str(e)+"} \\\ \hline\n"
+                        LINE+="\\textit{"+("%.5f" % decimal.Decimal(e))+"} \\\ \hline\n"
                             
                         #tex.write("\\textit{"+str(e)+"} \\\ \hline\n")
                         if writ==1 :
@@ -87,7 +90,7 @@ if(n<=1):
     sys.exit("run by using command :\npython CSV2LATEX.py  <./path/file1.csv> <./path/file2.csv> <..> ...\n")
     
 for i in range(1,n): 
-    CSV2LATEX(sys.argv[i],5)            
+    CSV2LATEX(sys.argv[i],6)            
 
 
         
